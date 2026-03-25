@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+/* ── Reset ── */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito Sans', sans-serif; }
+ul, li { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; text-decoration: none; }
+strong { font-weight: bold; }
+em { font-weight: bold; }
+img, iframe { max-width: 100%; }
+p { margin: 20px 0; }
+h1 { font-size: 12em; }
+h2 { font-size: 6em; }
+h3 { font-size: 2em; }
+h4 { font-size: .83em; }
+h5 { font-size: .75em; }
+h1,h2,h3,h4,h5 { font-weight: 700; margin-bottom: .6em; line-height: 1em; }
+
+/* ── Size helpers ── */
+.smallest { font-size: 10%; color: #00FF00; }
+.smaller  { font-size: 30%; }
+.bigger   { font-size: 150%; }
+.biggest  { font-size: 300%; }
+
+/* ── Body ── */
+body {
+  background-color: #000000;
+  margin: 2rem;
+  padding: 0;
+  line-height: 1.5em;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #000000;
+  border-top: 1px solid #111;
+  margin: 2rem;
+  padding: 20px 0;
+  line-height: 1.5em;
+  text-align: center;
+  color: #444;
+}
+
+/* ── Layout ── */
+.inner { width: 92%; max-width: 1020px; margin: auto; }
+.row { display: flex; max-width: 100%; }
+.column { flex: 33.33%; padding: 5px; }
+.highlight { background-color: #00FF00; color: #000; }
+
+/* ── Typography helpers ── */
+.imgPlant {
+  background: none;
+  border: none;
+  float: right;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+  width: 200px;
+}
+
+/* ── Custom cursor ── */
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0,255,0,1);
+  transition: width 0.1s, height 0.1s;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 999;
+}
+.cursor.expand { width: 50px; height: 50px; }
+.cursor:after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: #f00;
+}
+
+/* ── Header ── */
+header {
+  padding: 0;
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffffff;
+}
+#header-wrapper { margin: 30px 0; }
+
+/* ── Image invert hover effect ── */
+.img-con {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+}
+.imaginvert {
+  width: 100%;
+  filter: invert(100%);
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+.imaginvert:hover {
+  filter: invert(0);
+  transition: all 0.5s ease-in;
+  width: 100%;
+  z-index: 4;
+}
+
+/* ── Navigation ── */
+#nav-wrapper { margin: 30px 0; }
+#nav-inner ul { display: flex; justify-content: space-around; }
+#nav-inner li { margin-right: 10px; }
+#nav-inner li a { font-size: 1.1em; }
+#nav-inner li a:hover { color: #00FF00; }
+
+/* ── Cover image ── */
+#cover-image { max-width: 80%; }
+
+/* ── Forms ── */
+.form-row { display: flex; flex-wrap: wrap; align-items: center; margin: 20px 0; }
+.form-row select,
+.form-row input { flex-grow: 1; }
+
+input, select {
+  padding: 0 .7em;
+  height: 30px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  transition: 0.5s;
+  outline: none;
+  margin: 0 5px;
+  color: #ffffff;
+}
+input:focus, select:focus { border-color: #00FF00; }
+
+fieldset { margin: 40px 0; border: none; }
+legend { font-weight: 700; font-size: 1.5em; margin-bottom: .5em; color: #ffffff; }
+
+button {
+  background: #000000;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  padding: .5em;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+button:hover { background-color: #00FF00; color: #000; }
+
+/* ── Result output ── */
+.result-block {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-left: 3px solid #00FF00;
+  color: #00FF00;
+  font-size: 0.95em;
+}
+.result-block span { color: #ffffff; }

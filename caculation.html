@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculation — (AFTER LIFE) LAB x (LIFE) LAB</title>
+  <link href="style.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body style="background-color:#000000;">
+
+  <div class="cursor"></div>
+
+  <!-- Header -->
+  <header>
+    <div id="header-inner" class="inner">
+      <h2><a href="index.html">(AFTER LIFE) <span class="smaller">LAB</span> <span class="smallest">x</span> (LIFE)<span class="smaller">LAB</span></a></h2>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="nav-wrapper">
+    <div id="nav-inner" class="inner">
+      <ul>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="afterlifelab.html">AfterLife Lab</a></li>
+        <li><a href="lifelab.html">Life Lab</a></li>
+        <li><a href="caculation.html" style="color:#00FF00;">Calculation</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Calculator -->
+  <div class="inner" style="padding: 40px 0 80px;">
+
+    <h3 style="color:#00FF00; margin-bottom: 10px;">Body → Energy → Farm Calculator</h3>
+    <p style="color:#666; margin-bottom: 40px;">Enter your body weight and see how much energy and farm yield your biomass could generate.</p>
+
+    <fieldset>
+      <legend>Your Info</legend>
+
+      <div class="form-row">
+        <label style="color:#888; min-width:160px;">Date of passing</label>
+        <input type="date" id="date" />
+      </div>
+
+      <div class="form-row">
+        <label style="color:#888; min-width:160px;">Body weight (lbs)</label>
+        <input type="number" id="pounds" value="165" min="50" max="500" />
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Energy Chain</legend>
+
+      <div class="result-block">Weight → <span id="pounds2kgs">—</span> kg</div>
+      <div class="result-block">Biomass (30%) → <span id="weight2biomass">—</span> kg</div>
+      <div class="result-block">Biogas (80%) → <span id="biomass2biogas">—</span> kg</div>
+      <div class="result-block">Electricity → <span id="biogas2electricity">—</span> kWh</div>
+      <div class="result-block">Light hours → <span id="electricity2lighthrs">—</span> hrs</div>
+      <div class="result-block">Light days → <span id="lighthrs2lightdays">—</span> days</div>
+      <div class="result-block">Light weeks → <span id="lightdays2lightweeks">—</span> weeks</div>
+      <div class="result-block">Light months → <span id="lightweeks2lightmonths">—</span> months</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Farm Area</legend>
+
+      <div class="result-block">Body cubits → <span id="pounds2Farmcubits">—</span></div>
+      <div class="result-block">Farm area → <span id="cubic2farm">—</span> sq ft</div>
+      <div class="result-block">Ready to plant → <span id="estimateTime">—</span> (from <span id="dateTime">—</span>)</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Plant Choices</legend>
+      <p style="color:#666; font-size:0.9em; margin-bottom:20px;">Select what to grow and allocate % of your farm to each.</p>
+
+      <!-- Choice A: Vegetables -->
+      <div class="form-row">
+        <label style="color:#888; min-width:160px;">Vegetables — grow time</label>
+        <select id="choiceA">
+          <option value="2">2 months</option>
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+          <option value="12">12 months</option>
+        </select>
+        <input type="number" id="choiceA_percent" value="25" min="0" max="100" style="max-width:80px;" />
+        <span style="color:#666; margin-left:8px;">%</span>
+      </div>
+      <div class="result-block">Vegetables → <span id="choiceA_result">—</span> units ready <span id="estimateTimeA">—</span></div>
+
+      <!-- Choice B: Fruits -->
+      <div class="form-row" style="margin-top:20px;">
+        <label style="color:#888; min-width:160px;">Fruits — grow time</label>
+        <select id="choiceB">
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+          <option value="12">12 months</option>
+          <option value="24">24 months</option>
+        </select>
+        <input type="number" id="choiceB_percent" value="25" min="0" max="100" style="max-width:80px;" />
+        <span style="color:#666; margin-left:8px;">%</span>
+      </div>
+      <div class="result-block">Fruits → <span id="choiceB_result">—</span> units ready <span id="estimateTimeB">—</span></div>
+
+      <!-- Choice C: Flowers -->
+      <div class="form-row" style="margin-top:20px;">
+        <label style="color:#888; min-width:160px;">Flowers — grow time</label>
+        <select id="choiceC">
+          <option value="2">2 months</option>
+          <option value="3">3 months</option>
+          <option value="6">6 months</option>
+        </select>
+        <input type="number" id="choiceC_percent" value="25" min="0" max="100" style="max-width:80px;" />
+        <span style="color:#666; margin-left:8px;">%</span>
+      </div>
+      <div class="result-block">Flowers → <span id="choiceC_result">—</span> units ready <span id="estimateTimeC">—</span></div>
+
+      <!-- Choice D: Alfalfa -->
+      <div class="form-row" style="margin-top:20px;">
+        <label style="color:#888; min-width:160px;">Alfalfa — grow time</label>
+        <select id="choiceD">
+          <option value="1">1 month</option>
+          <option value="2">2 months</option>
+          <option value="3">3 months</option>
+        </select>
+        <input type="number" id="choiceD_percent" value="25" min="0" max="100" style="max-width:80px;" />
+        <span style="color:#666; margin-left:8px;">%</span>
+      </div>
+      <div class="result-block">Alfalfa → <span id="choiceD_result">—</span> units ready <span id="estimateTimeD">—</span></div>
+
+    </fieldset>
+
+    <!-- Image output -->
+    <fieldset>
+      <legend>Your Garden</legend>
+      <div id="flower-image" style="margin:10px 0;"></div>
+      <div id="veg-image" style="margin:10px 0;"></div>
+      <div id="fruit-image" style="margin:10px 0;"></div>
+      <div id="alfalfa-image" style="margin:10px 0;"></div>
+    </fieldset>
+
+  </div>
+
+  <footer>
+    <p>&copy; (AFTER LIFE) LAB x (LIFE) LAB</p>
+  </footer>
+
+</body>
+</html>

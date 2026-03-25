@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — (AFTER LIFE) LAB x (LIFE) LAB</title>
+  <link href="style.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body style="background-color:#000000;">
+  <div class="cursor"></div>
+  <header>
+    <div id="header-inner" class="inner">
+      <h2><a href="index.html">(AFTER LIFE) <span class="smaller">LAB</span> <span class="smallest">x</span> (LIFE)<span class="smaller">LAB</span></a></h2>
+    </div>
+  </header>
+  <nav id="nav-wrapper">
+    <div id="nav-inner" class="inner">
+      <ul>
+        <li><a href="aboutme.html">About</a></li>
+        <li><a href="afterlifelab.html">AfterLife Lab</a></li>
+        <li><a href="lifelab.html">Life Lab</a></li>
+        <li><a href="caculation.html">Calculation</a></li>
+        <li><a href="contact.html" style="color:#00FF00;">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="inner" style="padding: 60px 0; max-width: 600px;">
+    <h3 style="color:#00FF00; margin-bottom:30px;">Contact Me</h3>
+
+    <div style="margin-bottom:20px;">
+      <label style="display:block; color:#888; font-size:0.85em; margin-bottom:6px;">Name</label>
+      <input type="text" id="contact-name" placeholder="Your name" style="width:100%;" />
+    </div>
+
+    <div style="margin-bottom:20px;">
+      <label style="display:block; color:#888; font-size:0.85em; margin-bottom:6px;">Email</label>
+      <input type="email" id="contact-email" placeholder="your@email.com" style="width:100%;" />
+    </div>
+
+    <div style="margin-bottom:20px;">
+      <label style="display:block; color:#888; font-size:0.85em; margin-bottom:6px;">Message</label>
+      <textarea id="contact-message" placeholder="Say hello..." style="width:100%; height:140px; background:#111; border:1px solid #333; color:#fff; padding:10px 14px; border-radius:4px; font-family:inherit; font-size:1em; outline:none; resize:vertical;"></textarea>
+    </div>
+
+    <button onclick="alert('Thank you! (Wire up to a form service like Formspree to receive emails)')">Send Message</button>
+
+    <p style="color:#444; font-size:0.85em; margin-top:30px;">
+      To receive emails, connect this form to <a href="https://formspree.io" target="_blank" style="color:#00FF00;">Formspree</a> — it's free.
+    </p>
+  </div>
+  <footer><p>&copy; (AFTER LIFE) LAB x (LIFE) LAB</p></footer>
+</body>
+</html>
